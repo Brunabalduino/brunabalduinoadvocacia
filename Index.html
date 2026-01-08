@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruna Balduino | Advocacia Imobiliária</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cinza-fundo: #333333; /* Cinza escuro da imagem */
+            --dourado: #c4a47c;     /* Dourado dos botões e títulos */
+            --branco: #ffffff;
+            --texto-p: #cccccc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cinza-fundo);
+            color: var(--branco);
+            line-height: 1.6;
+        }
+
+        /* Header Branco conforme a imagem */
+        header {
+            background-color: var(--branco);
+            padding: 15px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            color: #333;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            margin-left: 20px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 10%;
+            text-align: center;
+            border-bottom: 1px solid #444;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--texto-p);
+            font-weight: 300;
+        }
+
+        .btn-dourado {
+            background-color: var(--dourado);
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            display: inline-block;
+        }
+
+        /* Seção Artigos */
+        section { padding: 80px 10%; }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado);
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+        }
+
+        .grid-artigos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card-artigo {
+            background-color: #fff;
+            color: #333;
+            padding: 0;
+            display: flex;
+            flex-direction: row; /* Estilo horizontal da imagem */
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .card-artigo img {
+            width: 120px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-content { padding: 20px; }
+
+        .card-content h3 {
+            font-size: 14px;
+            font-family: 'Cinzel', serif;
+            margin-bottom: 10px;
+        }
+
+        .btn-link {
+            color: var(--dourado);
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        /* Seção Quem Sou Eu */
+        .bruna-advogada {
+            background-color: #2a2a2a;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 60px;
+            margin-top: 40px;
+        }
+
+        .bruna-foto {
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .bruna-foto img {
+            width: 100%;
+            border: 1px solid var(--dourado);
+        }
+
+        .bruna-info { flex: 2; }
+
+        .bruna-info h2 {
+            font-family: 'Cinzel', serif;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        /* Footer / Contato */
+        footer {
+            padding: 60px 10%;
+            background-color: #1a1a1a;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-box { font-size: 14px; color: var(--texto-p); }
+        .footer-box h4 { color: var(--dourado); margin-bottom: 15px; font-family: 'Cinzel', serif; }
+
+        .btn-whats {
+            background-color: #25d366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .bruna-advogada, footer { flex-direction: column; grid-template-columns: 1fr; }
+            .card-artigo { flex-direction: column; }
+            .card-artigo img { width: 100%; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">BRUNA BALDUINO</div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#artigos">Artigos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>BRUNA BALDUINO ADVOCACIA</h1>
+        <p>Soluções jurídicas estratégicas no Direito Imobiliário para garantir a segurança do seu patrimônio.</p>
+        <a href="https://wa.me/5516992980386" class="btn-dourado">Falar com Especialista</a>
+    </section>
+
+    <section id="artigos">
+        <h2 class="section-title">Artigos e Notícias</h2>
+        <div class="grid-artigos">
+            <div class="card-artigo">
+                <img src="https://via.placeholder.com/150" alt="Artigo">
+                <div class="card-content">
+                    <h3>Assessoria na Compra e Venda</h3>
+                    <a href="#" class="btn-link">LER MAIS</a>
+                </div>
+            </div>
+            <div class="card-artigo">
+                <img src="https://via.placeholder.com/150" alt="Artigo">
+                <div class="card-content">
+                    <h3>Regularização de Imóveis</h3>
+                    <a href="#" class="btn-link">LER MAIS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2 class="section-title">Bruna Balduino Advogada</h2>
+        <div class="bruna-advogada">
+            <div class="bruna-foto">
+                <img src="https://via.placeholder.com/300x400" alt="Bruna Balduino">
+            </div>
+            <div class="bruna-info">
+                <h2>Quem Sou Eu</h2>
+                <p>Especialista em Direito Imobiliário, minha missão é oferecer segurança jurídica em cada transação patrimonial. Com atuação focada em resultados, busco simplificar o jurídico para proteger o que é seu.</p>
+                <br>
+                <a href="#" class="btn-dourado">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="footer-box">
+            <h4>Endereço</h4>
+            <p>Avenida Antônio Ribeiro dos Santos, nº 393</p>
+            <p>Centro, Guará-SP</p>
+        </div>
+        <div class="footer-box">
+            <h4>Fale Conosco</h4>
+            <p>E-mail: contato@brunabalduinoadvocacia.com.br</p>
+            <p>Telefone: (16) 99298-0386</p>
+            <a href="https://wa.me/5516992980386" class="btn-whats">WhatsApp</a>
+        </div>
+    </footer>
+
+</body>
+</html>
